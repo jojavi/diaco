@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+
+        <button onClick="history.back()">
+            Regresar
+        </button>
+
+        <h1>
+            Men&uacute; 
+        </h1>
+        
+    </nav>
+
+    <table>
+
+        <tr>
+            <td>
+                <form action="/quejas" method="POST">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Ver quejas
+                    </button>
+                </form>
+            </td>
+
+            <td>
+                <form action="/data" method="POST">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Estad&iacute;sticas
+                    </button>
+                </form>
+            </td>
+
+            <td>
+                <form action="/seguimiento" method="POST">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Dar seguimiento
+                    </button>
+                </form>
+            </td>
+
+        </tr>
+
+    </table>
+    
+</body>
+</html>

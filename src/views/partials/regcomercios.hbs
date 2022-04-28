@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<meta name="viewport" content="width=1,initial-scale=1,user-scalable=1" />
+	<title>Registrate</title>
+
+		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<!--link rel="stylesheet" type="text/css" href="/css/style_login.css" /-->
+	<!-- Google Font -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core CSS -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- jQuery Library -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <!-- Bootstrap Core JS -->
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	    <script>
+ var options1 = {
+		  AltaVerapaz : ["Cobán","Santa Cruz Verapaz", "San Cristóbal Verapaz","Tactic","Tamahu","San Miguel Tucurú","Panzoz","Senahu","San Pedro Carcha","San Juan Chamelco","San Agustin Lanquín","Santa María Cahabón","Chisec","Chahal","Fray Bartolomé de las Casas","Santa Catalina La Tinta","Raxruhá"],
+		  BajaVerapaz : ["Salama","San Miguel Chicaj","Rabinal","Cubulco","Granados","Santa Cruz el Chol","San Jerónimo","Purulhá"],
+		  Chimaltenango : ["Chimaltenango", "San José Poaquil","San Martín Jilotepeque","San Juan Comalapa","Santa Apolonia","Tecpán","Patzún","San Miguel Pochuta","Patzicía","Santa Cruz Balanyá","Acatenango","San Pedro Yepocapa","San Andrés Itzapa","Parramos","Zaragoza","El Tejar"],
+		  Chiquimula : [ "Chiquimula","Jocotán","Esquipulas", "Camotán","Quezaltepeque","Olopa","Ipala","San Juan Ermita","Concepción Las Minas","San Jacinto","San José la Arada"],
+		  Peten : ["Flores","San José","San Benito","San Andres","La Libertad","San Francisco","Santa Ana","Dolores","San Luis","Sayaxché","Melchor de Mencos","Poptún"],
+		  ElProgreso : ["El Jícaro","Morazán","San Agustín Acasaguastlán","San Antonio La Paz","San Cristóbal Acasaguastlán","Sanarate","Guastatoya","Sansare"],
+		  Quiche : ["Santa Cruz del Quiché","Chiché","Chinique","Zacualpa","Chajul","Santo Tomás Chichicastenango","Patzité","San Antonio Ilotenango","San Pedro Jocopilas","Cunén","San Juan Cotzal","Santa María Joyabaj","Santa María Nebaj","San Andrés Sajcabajá","Uspantán","Sacapulas","San Bartolomé Jocotenango","Canillá","Chicamán","Ixcán","Pachalum"],
+          Escuintla : ["Escuintla","Santa Lucía Cotzumalguapa","La Democracia","Siquinalá","Masagua","Tiquisate","La Gomera","Guaganazapa","San José","Iztapa","Palín","San Vicente Pacaya","Nueva Concepción"],
+          Guatemala : ["Santa Catarina Pinula","San José Pinula","Guatemala","San José del Golfo","Palencia","Chinautla","San Pedro Ayampuc","Mixco","San Pedro Sacatapéquez","San Juan Sacatepéquez","Chuarrancho","San Raymundo","Fraijanes","Amatitlán","Villa Nueva","Villa Canales","San Miguel Petapa"],
+          Huehuetenango : ["Huehuetenango","Chiantla","Malacatancito","Cuilco","Nentón","San Pedro Necta","Jacaltenango","Soloma","Ixtahuacán","Santa Bárbara","La Libertad","La Democracia","San Miguel Acatán","San Rafael La Independencia","Todos Santos Cuchumatán","San Juan Atitlán","Santa Eulalia","San Mateo Ixtatán","Colotenango","San Sebastián","Tectitán","Concepción Huista","San Juan Ixcoy","San Antonio Huista","Santa Cruz Barillas","San Sebastián Coatán","Aguacatán","San Rafael Petzal","San Gaspar Ixchil","Santiago Chimaltenango","Santa Ana Huista"],
+		  Izabal : ["Morales","Los Amates","Livingston","El Estor","Puerto Barrios"],
+          Jalapa : ["Jalapa","San Pedro Pinula","San Luis Jilotepeque","San Manuel Chaparrón","San Carlos Alzatate","Monjas","Mataquescuintla"],
+          Jutiapa  : ["Jutiapa","El Progreso","Santa Catarina Mita","Agua Blanca","Asunción Mita","Yupiltepeque","Atescatempa","Jerez","El Adelanto","Zapotitlán","Comapa","Jalpatagua","Conguaco","Moyuta","Pasaco","Quesada"],
+		  Quetzaltenango  : ["Quetzaltenango","Salcaja","San Juan Olintepeque","San Carlos Sija","Sibilia","Cabrican","Cajola","San Miguel Siguila","San Juan Ostuncalco","San Mateo","Concepción Chiquirichapa","San Martín Sacatepéquez","Almolonga","Cantel","Huitán","Zunil","Colomba Costa Cuca","San Francisco La Union","El Palmar","Coatepeque","Génova","Flores Costa Cuca","La Esperanza","Palestina de Los Altos"],
+		  Retalhuleu : ["Retalhuleu","San Sebastian","Santa Cruz Mulua","San Martín Zapotitlan","San Felipe","San Andrés Villa Seca","Champerico","Nuevo San Carlos","El Asintal"],
+ 		  Sacatepequez  : ["Antigua Guatemala","Jocotenango","Pastores","Sumpango","Santo Domingo Xenacoj","Santiago Sacatepequez","San Bartolome Milpas Altas","San Lucas Sacatepequez","Santa Lucia Milpas Altas","Magdalena Milpas Altas","Santa María de Jesus","Ciudad Vieja","San Miguel Dueñas","San Juan Alotenango","San Antonio Aguas Calientes","Santa Catarina Barahona"],
+		  SanMarcos  : ["San Marcos","Ayutla","Catarina","Comitancillo","Concepción Tutuapa","El Quetzal","El Rodeo","El Tumblador","Ixchiguan","La Reforma","Malacatan","Nuevo Progreso","Ocos","Pajapita","Esquipulas Palo Gordo","San Antonio Sacatepequez","San Cristobal Cucho","San Jose Ojetenam","San Lorenzo","San Miguel Ixtahuacan","San Pablo","San Pedro Sacatepequez","San Rafael Pie de la Cuesta","Sibinal","Sipacapa","Tacana","Tajumulco","Tejutla","Río Blanco","La Blanca"],
+		  SantaRosa  : ["Cuilapa","Casillas Santa Rosa","Chiquimulilla","Guazacapan","Nueva Santa Rosa","Oratorio","Pueblo Nuevo Viñas","San Juan Tecuaco","San Rafael Las Flores","Santa Cruz Naranjo","Santa María Ixhuatan","Santa Rosa de Lima","Taxisco","Barberena"],
+ 		  Solola  : ["Solola","Concepcion","Nahualá","Panajachel","San Andrés Semetabaj","San Antonio Palopó","San José Chacayá","San Juan La Laguna","San Lucas Tolimán","San Marcos La Laguna","San Pablo La Laguna","San Pedro La Laguna","Santa Catarina Ixtahuacán","Santa Catarina Palopó","Santa Clara La Laguna","Santa Cruz La Laguna","Santa Lucía Utatlán","Santa María Visitación","Santiago Atitlán"],
+		  Totonicapan  : ["Totonicapán","San Cristóbal Totonicapán","San Francisco El Alto","San Andrés Xecul","Momostenango","Santa María Chiquimula","Santa Lucía La Reforma","San Bartolo"],
+		  Suchitepequez : ["Mazatenango","Cuyotenango","San Francisco Zapotitlán","San Bernardino","San José El Ídolo","Santo Domingo","San Lorenzo","Samayac","San Pablo Jocopilas","San Antonio","San Miguel Panán","San Gabriel","Chicacao","Patulul","Santa Bárbara","San Juan Bautista","Santo Tomás La Unión","Zunilito","Pueblo Nuevo","Río Bravo"],
+  		  Zacapa : ["Cabañas","Estanzuela","Gualán","Huité","La Unión","Río Hondo","San Jorge","San Diego","Teculután","Usumatlán","Zacapa"]
+		}
+
+var options = {
+		  RegionNorte : ["Peten","AltaVerapaz","BajaVerapaz"],
+		  NorOriente : ["Izabal","Chiquimula","Zacapa","ElProgreso"],
+		  SurOriente : ["Jutiapa","Jalapa","SantaRosa"],
+		  RegionCentral : ["Guatemala","Chimaltenango","Sacatepequez","Escuintla"],
+		  NorOccidente : ["Huehuetenango","Quiche"],
+		  SurOccidente : ["SanMarcos","Quetzaltenango","Totonicapan","Solola","Retalhuleu","Suchitepequez"],
+
+		}
+
+$(function(){
+	var fillSecondary = function(){
+		var selected = $('#primary').val();
+		$('#secondary').empty();
+		options[selected].forEach(function(element,index){
+			$('#secondary').append('<option value="'+element+'">'+element+'</option>');
+		});
+	}
+	$('#primary').change(fillSecondary);
+	fillSecondary();
+});
+
+$(function(){
+	var fillthird = function(){
+		var selected1 = $('#secondary').val();
+		$('#third').empty();
+		options1[selected1].forEach(function(element,index){
+			$('#third').append('<option value="'+element+'">'+element+'</option>');
+		});
+	}
+	$('#secondary').change(fillthird);
+	fillthird();
+});
+</script>
+
+</head>
+<body>
+
+	    <nav class="navbar navbar-dark bg-dark">
+
+        <button onClick="history.back()">
+            Regresar
+        </button>
+
+        <h1>
+            Regritro de comercios 
+        </h1>
+        
+    </nav>
+
+	
+	<section class="container">
+	    <section class="login-form">
+		<form method="post" action="/registrocomercio" role="comercio">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h3>Comercio</h3>
+                    <input type="text" name="nombre" required placeholder="Nombre Comercio" class="form-control" />
+					</br>
+					
+					<select class="form-select form-select-sm" aria-label=".form-select-sm example"  id="primary" name="region">
+ 						 <option value="RegionNorte">Region Norte</option>
+ 						 <option value="NorOriente">NorOriente</option>
+  						 <option value="SurOriente">SurOriente</option>
+						 <option value="Metropolitana">Metropolitana</option>
+						 <option value="RegionCentral">RegionCentral</option>
+						 <option value="NorOccidente">NorOccidente</option>
+						 <option value="SurOccidente">SurOccidente</option>
+
+						</select>
+   					 </br>
+					 </br>
+					<select id="secondary" name="departamento">
+					
+   					</select>
+					   </br>
+ 					</br>	
+					<select id="third" name="municipio">
+						
+   					</select>
+ 					</br>
+ 					</br>					
+					<button type="submit" class="btn btn-block btn-info">Registrar</button>
+				</div>
+				
+			</div>
+		</form>
+		</section>
+	</section>
+	
+</body>
+</html>

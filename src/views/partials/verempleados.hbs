@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+
+        <button onClick="history.back()">
+            Regresar
+        </button>
+
+        <h1>
+            Lista de empleados 
+        </h1>
+        
+    </nav>
+
+     <section class="movimientos">
+
+        <form action="/seguimiento" method="POST">
+            <button class="btn btn-primary btn-block" type="submit">
+                Ver lista de quejas
+            </button>
+        </form>
+        
+        <table  class="container">
+            <tr>
+                <th class="fechacol">
+                    Fecha
+                </th>
+                <th>
+                    Comercio
+                </th>
+                <th>
+                    Tipo
+                </th>
+            </tr>
+        </table> 
+
+        {{#each quejas}}
+
+            <table class="container">
+                <tr>
+                    <th>
+                        {{Nombre}}
+                    </th>
+                    <th>
+                        {{Fechain}}
+                    </th>
+                    <th>
+                        {{Comercio}}
+                    </th>
+                    <th>
+                        {{NumQuejas}}
+                    </th>
+                    <th>
+                        {{phone}}
+                    </th>
+                </tr>
+            </table>
+
+        {{/each}}
+
+    </section>
+    
+</body>
+</html>
